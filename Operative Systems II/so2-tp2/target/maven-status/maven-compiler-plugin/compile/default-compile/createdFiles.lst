@@ -1,0 +1,14 @@
+servlets/welcomeServlet.class
+model/businessLogic.class
+beans/Registos.class
+servlets/editServlet.class
+beans/Utilizador.class
+model/DataManager.class
+servlets/profileServlet.class
+model/Database.class
+servlets/logoutServlet.class
+servlets/mapServlet.class
+servlets/addRegServlet.class
+servlets/loginServlet.class
+servlets/createServlet.class
+servlets/indexServlet.class

@@ -1,0 +1,3105 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset = "utf-8" />
+
+        <title>DublinBus2Floors</title>
+
+        <script src="lib/x3dom-full.js"></script>
+
+        <link rel="stylesheet" href="lib/x3dom.css">
+
+        <style type = "text/css">
+
+        th {
+        	padding: 2em;
+        	background-color:#0000FF;
+        }
+
+        td {
+        	padding: 4em;
+            background-color: #FFFFFF;
+            text-align: center;
+        }
+
+        table {
+
+        	width:100%;
+        }
+
+        h1, h2, h4 {
+            text-align: center;}
+
+        .background {
+		 	background-image:url(media/estrada.jpg);
+		  	background-size: 100%;
+		  	opacity: 1;
+		}
+
+        </style>
+
+    </head>
+
+    <body onload="main();">
+
+    	<h1>DublinBus2Floors, José Serra 33289 </h1>
+
+    	<table>
+
+			<tr>
+
+				<th>Original</th>
+
+				<th>Reprodução</th>
+
+			</tr>
+					
+    		<tr>
+
+                <td>
+                	<img src = "media/dublin.jpg" width = "563px" height = "435px" >
+                </td>
+                
+                <td>
+
+                  	<x3d width="530px" height="324px" class="background">
+
+                     	<scene>
+
+                     	<Cylinder id = "rodas" radius =  1 height = 1 >
+                     	</Cylinder>
+
+                     	<Box id = "rect" height = 1 width = 1 >
+                     	</Box>
+
+
+				            <extrusion id = "lateral"
+				                crossSection="
+				                	-1.000  0.000
+				                	-0.950  0.500
+				                	 0.888  0.500
+				                	 1.000  0.250
+				                	 1.000 -0.400
+				                	 0.833 -0.433
+				                	 0.650 -0.433
+				                	 0.650 -0.390   
+				                	 0.642 -0.343
+				                	 0.630 -0.293
+				                	 0.593 -0.266
+				                	 0.550 -0.255   
+				                	 0.507 -0.266
+				                	 0.474 -0.293
+				                	 0.449 -0.343
+				                	 0.446 -0.393
+				                	 0.441 -0.433
+				                	-0.441 -0.433
+				                	-0.446 -0.393   
+				                	-0.450 -0.343
+				                	-0.474 -0.293
+				                	-0.517 -0.266
+				                	-0.550 -0.255
+				                	-0.620 -0.266
+				                	-0.630 -0.293
+				                	-0.642 -0.343
+				                	-0.650 -0.433
+				                	-0.833 -0.433
+				                	-1.000 -0.400
+				                	-1.000  0.000
+				                	"
+
+				                spine="
+				                   0 0 0
+				                   0 0.25 0"
+
+				               	scale="
+				                   1 1
+				                   1 1"
+
+				                >
+				                </extrusion>
+
+				                 <extrusion id = "centro"
+				                crossSection="
+				                	-1.000  0.000
+				                	-0.950  0.500
+				                	 0.888  0.500
+				                	 1.000  0.250
+				                	 1.000 -0.400
+				                	 0.833 -0.433
+				                	-0.833 -0.433
+				                	-1.000 -0.400
+				                	-1.000  0.000
+				                	"
+
+				                spine="
+				                   0 0 0
+				                   0 0.5 0"
+
+				               	scale="
+				                   1 1
+				                   1 1"
+
+				                >
+				                </extrusion>
+
+				                <extrusion id = "amarelo"
+				                crossSection="
+				                	-1.000 -0.250
+				                	-1.000  0.000
+				                	-0.950  0.500
+				                	 0.888  0.500
+				                	 0.633 -0.116
+				                	 0.433 -0.240
+				                	-1.000 -0.250
+				                	"
+				                spine="
+				                   0 0 0
+				                   0 0.25 0"
+
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                <extrusion id = "azulbb"
+				                crossSection="
+				                	-1.000 -0.275
+				                	-1.000 -0.250
+				                	 0.433 -0.240
+				                	 0.633 -0.116
+				                	 0.888  0.500
+				                	 1.000  0.250
+				                	 1.000 -0.125
+				                	 0.908 -0.250
+				                	 0.817 -0.275				                      	   
+			                		 0.642 -0.275				                	
+			                		-0.642 -0.275				           		
+				                	-1.000 -0.275
+				                	"
+				                spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                <extrusion id = "linha_branca"
+				                crossSection="
+				                   -1.000 -0.275
+				                   -1.000 -0.285
+				                	0.817 -0.285
+				                	0.908 -0.265
+				             		1.000 -0.128
+				             		1.000 -0.125				             	
+				             		0.908 -0.252
+				             		0.817 -0.275
+				                   -1.000 -0.275
+				                	"
+				                spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                 <extrusion id = "linha_branca_tras"
+				                crossSection="
+				                -1.000 -0.135
+				                -1.000 -0.125
+				                 1.000 -0.125
+				                 1.000 -0.135
+				                -1.000 -0.135
+				                	"
+				                spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                 <extrusion id = "azul_escuro_frente"
+				                crossSection="
+				                	-1.000 -0.285
+				                	-1.000 -0.400			                	
+				                	-0.833 -0.433
+				                	-0.650 -0.433
+				                	-0.642 -0.343
+				                	-0.630 -0.293
+				                	-0.629 -0.285
+				                	-1.000 -0.285
+				                	"
+				                spine="
+				                   0 0 0
+				                   0 0.25 0"
+
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                <extrusion id = "azul_escuro_meio"
+				                crossSection="
+				                	-0.441  -0.433
+				                	 0.441  -0.433
+				                	 0.446  -0.393
+				                	 0.449  -0.343
+				                	 0.474  -0.293
+				                	 0.4749 -0.285
+				                	-0.4749 -0.285
+				                	-0.474  -0.293
+				                	-0.449  -0.343
+				                	-0.446  -0.393	
+				                	-0.441  -0.433
+				                	"
+				                spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                 <extrusion id = "azul_escuro_tras"
+				                crossSection="
+				                	0.650 -0.433
+				                	0.650 -0.390   
+				                	0.642 -0.343			        
+				                	0.629 -0.285
+									0.817 -0.285
+				                	0.908 -0.265
+				                	1.000 -0.128
+				                	1.000 -0.400
+				                	0.833 -0.433
+				                	0.650 -0.433		        
+				                	"
+				                spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                   >
+				                </extrusion>			               
+
+				                 <extrusion id = "janela_tras"
+				                crossSection="
+				                0.608 0.283
+				                0.933 0.283
+				                0.867 0.463
+				                0.608 0.463
+				                0.608 0.283				                			    
+				                "
+				                spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                 <extrusion id = "janela_quadrado"
+				                crossSection="
+				                	0.313 0.283
+				                	0.580 0.283
+				                	0.580 0.463
+				                	0.313 0.463
+				                	0.313 0.283
+				               		"
+				                spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                 <extrusion id = "janela_frente"
+				                crossSection="
+				                -0.947	0.283
+				                -0.717	0.283
+				                -0.717	0.463
+				                -0.927	0.463
+				                -0.947	0.283				                			    
+				                "
+				                spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                 <extrusion id = "painel_branco"
+				                crossSection="
+				               	0.670 0.083
+				                0.670 0.25
+				               -0.500 0.25
+				               -0.500 0.083
+				                0.670 0.083				         
+				                "
+				                spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+
+				                >
+				                </extrusion>
+
+				                <extrusion id = "painel_verde"
+				                crossSection="
+				               	-0.833  0.25
+				                -0.833  0.083
+				                -0.542  0.083
+				                -0.542 -0.190
+				                -0.317 -0.190
+				                -0.317  0.083
+				                0.500   0.083
+				                0.500   0.25
+				                -0.833  0.25				              			         
+				                "			         			               				 spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                <extrusion id = "janela_frente_topo"
+				                crossSection="
+				               	-0.167 -0.167
+				               	-0.167  0.167
+				               	 0.112  0.167
+				               	 0.133  0.150
+				               	 0.152  0.125
+				               	 0.155  0.100
+				                 0.155 -0.100				              
+				               	 0.152 -0.125
+				               	 0.133 -0.150
+				               	 0.112 -0.167
+				               	-0.167 -0.167
+				                "			         			               				 spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                 <extrusion id = "janela_frente_topo2"
+				                crossSection="
+				                 0.167 -0.167
+				               	 0.167  0.167
+				               	-0.112  0.167
+				               	-0.133  0.150
+				               	-0.152  0.125
+				               	-0.155  0.100
+				               	-0.155 -0.100	
+				               	-0.152 -0.125
+				               	-0.133 -0.150
+				               	-0.112 -0.167
+				               	 0.167 -0.167
+				                "			         			               				 spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                <extrusion id = "janela_frente_media"
+				                crossSection="
+				               	-0.112 -0.167
+				               	-0.133 -0.150
+				               	-0.152 -0.125
+				               	-0.155 -0.100
+				               	-0.155  0.100				               
+				               	-0.152  0.125
+				               	-0.133  0.150
+				               	-0.112  0.167
+				               	 0.112  0.167
+				               	 0.133  0.150
+				               	 0.152  0.125
+				               	 0.155  0.100
+				                 0.155 -0.100				               
+				               	 0.152 -0.125
+				               	 0.133 -0.150
+				               	 0.112 -0.167
+
+				               	 -0.112 0.167
+				               	
+				                "			         			               				 spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                 <extrusion id = "9"
+				                crossSection="
+				                -0.667 0.333
+				                -0.750 0.417
+				                -0.833 0.417
+				                -0.917 0.333				          
+				                -0.917 0.083
+				                -0.833 0.000
+				                -0.750 0.000
+				                -0.750 0.083
+				                -0.833 0.083
+				                -0.834 0.217
+				                -0.750 0.217
+				                -0.667 0.280
+				                -0.667 0.333			               	
+				                "			         			               				 spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                <extrusion id = "1"
+				                crossSection="
+				               	-0.417 0.833
+				               	-0.500 0.917
+				               	-0.583 0.833
+				               	-0.583 0.667
+				               	-0.667 0.667
+				               	-0.667 0.583
+				               	-0.417 0.583
+				               	-0.417 0.667
+				               	-0.500 0.667
+				               	-0.501 0.833
+				               	-0.417 0.833
+				                "			         			               				 spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				               <extrusion id = "0"
+				                crossSection="
+				                -0.667 0.333
+				                -0.750 0.417
+				                -0.833 0.417
+				                -0.917 0.333				          
+				                -0.917 0.083
+				                -0.833 0.000
+				                -0.750 0.000
+				                -0.667 0.083
+				                -0.667 0.280
+				                -0.667 0.333			               	
+				                "			         			               				 spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                <extrusion id = "janela_tras_deitada"
+				                crossSection="
+				               	0.000 0.250
+				               	0.350 0.250
+				               	0.380 0.248
+				               	0.400 0.217
+				               	0.405 0.192
+				               	0.415 0.150
+				               	0.425 0.117
+				               	0.430 0.083
+				               	0.438 0.000
+				               -0.438 0.000
+				               -0.430 0.083
+				               -0.425 0.117
+				               -0.415 0.150
+				               -0.405 0.192
+				               -0.400 0.217
+				               -0.380 0.248
+				               -0.350 0.250
+				                0.000 0.250
+				                "			         			               				 spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                <extrusion id = "janela_tras_longa"
+				                crossSection="
+				               	0.000 0.250
+				               	0.350 0.250
+				               	0.380 0.248
+				               	0.400 0.217
+				               	0.405 0.192
+				               	0.415 0.150
+				               	0.425 0.117
+				               	0.430 0.083
+				               	0.438 0.000
+				               -0.438 0.000
+				               -0.430 0.083
+				               -0.425 0.117
+				               -0.415 0.150
+				               -0.405 0.192
+				               -0.400 0.217
+				               -0.380 0.248
+				               -0.350 0.250
+				                0.000 0.250
+				                "			         			               				 
+				                spine="
+				                   0 0 0
+				                   0 0.25 0"
+				               	scale="
+				                   1 1
+				                   1 1"
+				                >
+				                </extrusion>
+
+				                <transform id="autocarro" scale="2.4 2.4 2.4" translation="0.4 0.9 0" rotation="1.3 -0.8 -1.1 -1.2">
+
+				                <transform id="lateral1" translation="0 0.5 0" scale="2 1 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#A18F1F"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="lateral">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="lateral2" translation="0 -0.5 0" scale="2 1 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#A18F1F"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="lateral">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+					            <transform id="centro1" translation="0 -0.25 0" scale="2 1.5 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#A18F1F"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="centro">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                      <transform id="rodaFE" translation="1.1 0.65 -0.8 " scale="0.2 0.2 0.2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="rodaFD" translation="1.1 -0.40 -0.8 " scale="0.2 0.2 0.2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="rodaTE" translation="-1.1 0.65 -0.8 " scale="0.2 0.2 0.2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="rodaTD" translation="-1.1 -0.40 -0.8 " scale="0.2 0.2 0.2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="janteFE" translation="-1.1 -0.46 -0.8 " scale="0.1 0.1 0.1" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="gray"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janteFD" translation="-1.1 0.71 -0.8 " scale="0.1 0.1 0.1" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="gray"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janteTE" translation="1.1 -0.46 -0.8 " scale="0.1 0.1 0.1" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="gray"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janteTD" translation="1.1 0.71 -0.8 " scale="0.1 0.1 0.1" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="gray"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="porca1FE" translation="-1.05 -0.516 -0.8 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="porca2FE" translation="-1.15 -0.516 -0.8 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="porca3FE" translation="-1.1 -0.516 -0.85 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="porca4FE" translation="-1.1 -0.516 -0.75 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="porca1TE" translation="1.05 -0.516 -0.8 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="porca2TE" translation="1.15 -0.516 -0.8 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="porca3TE" translation="1.1 -0.516 -0.85 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="porca4TE" translation="1.1 -0.516 -0.75 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="porca1FD" translation="-1.05 0.756 -0.8 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="porca2FD" translation="-1.15 0.756 -0.8 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="porca3FD" translation="-1.1 0.756 -0.85 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="porca4FD" translation="-1.1 0.756 -0.75 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="porca1TD" translation="1.05 0.756 -0.8 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="porca2TD" translation="1.15 0.756 -0.8 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="porca3TD" translation="1.1 0.756 -0.85 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="porca4TD" translation="1.1 0.756 -0.75 " scale="0.01 0.01 0.01" rotation="0 0 0 0">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="AmareloD" translation="0 -0.502 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#A18F1F"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="amarelo">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="AmareloE" translation="0 0.75 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#A18F1F"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="amarelo">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="AzulbbD" translation="0 -0.502 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#3C789C"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="azulbb">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="AzulbbE" translation="0 0.75 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#3C789C"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="azulbb">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="linha_brancaE" translation="0 0.75 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="linha_branca">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="linha_brancaD" translation="0 -0.502 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="linha_branca">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                      <transform id="azul_escuroFD" translation="0 0.75 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#191E31"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="azul_escuro_frente">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="azul_escuroFE" translation="0 -0.502 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#191E31"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="azul_escuro_frente">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="azul_escuroMD" translation="0 0.75 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#191E31"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="azul_escuro_meio">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="azul_escuroME" translation="0 -0.502 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#191E31"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="azul_escuro_meio">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="azul_escuroTD" translation="0 0.75 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#191E31"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="azul_escuro_tras">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="azul_escuroTE" translation="0 -0.501 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#191E31"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="azul_escuro_tras">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="painel_brancoE" translation="0 -0.504 -0.08" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="painel_branco">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOpainel_brancoE" translation="0 -0.503 -0.10" scale="2.02 0.0125 2.12" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="yellow"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="painel_branco">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="janela1EC" translation="0 -0.504 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_tras">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela1EC" translation="-0.07 -0.503 -0.04" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_tras">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela2EC" translation="0 -0.504 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela2EC" translation="-0.04 -0.503 -0.04" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela3EC" translation="-0.59 -0.504 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela3EC" translation="-0.63 -0.503 -0.04" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela_MC" translation="-0.40 -0.504 0" scale="0.6666667 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela_MC" translation="-0.44 -0.503 -0.04" scale="0.7666667 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela4EC" translation="-1.4 -0.504 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="CONTORNOjanela4EC" translation="-1.44 -0.503 -0.04" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="janela5EC" translation="-2.0 -0.504 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela5EC" translation="-2.04 -0.503 -0.04" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="janela6EC" translation="0 -0.504 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_frente">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="CONTORNOjanela6EC" translation="0.08 -0.503 -0.04" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_frente">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela1EB" translation="0.9 -0.504 -0.98" scale="1 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela1EB" translation="0.86 -0.503 -1.02" scale="1.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela2EB" translation="0 -0.504 -0.98" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela2EB" translation="-0.04 -0.503 -1.02" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela3EB" translation="-0.59 -0.504 -0.98" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+			                            </shape>
+
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela3EB" translation="-0.63 -0.503 -1.02" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+			                            </shape>
+
+			                    </transform>
+
+			                     <transform id="janela_MB" translation="-0.40 -0.504 -0.98" scale="0.6666667 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela_MB" translation="-0.44 -0.503 -1.02" scale="0.7666667 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela4EB" translation="-1.4 -0.504 -0.98" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela4EB" translation="-1.44 -0.503 -1.02" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="janela5EB" translation="-2.0 -0.504 -0.98" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="CONTORNOjanela5EB" translation="-2.04 -0.503 -1.02" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="janela1DC" translation="0 0.752 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_tras">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela1DC" translation="-0.08 0.751 -0.04" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_tras">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela2DC" translation="0 0.752 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela2DC" translation="-0.04 0.751 -0.04" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela3DC" translation="-0.59 0.752 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela3DC" translation="-0.63 0.751 -0.04" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela_MC" translation="-0.40 0.752 0" scale="0.6666667 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela_MC" translation="-0.44 0.751 -0.04" scale="0.7666667 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela4DC" translation="-1.4 0.752 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="CONTORNOjanela4DC" translation="-1.44 0.751 -0.04" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="janela5DC" translation="-2.0 0.752 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="CONTORNOjanela5DC" translation="-2.04 0.751 -0.04" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="janela6DC" translation="0 0.752 0" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_frente">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="CONTORNOjanela6DC" translation="0.08 0.751 -0.04" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_frente">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela2DB" translation="0 0.752 -0.98" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="CONTORNOjanela2DB" translation="-0.04 0.751 -1.02" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela3DB" translation="-0.59 0.752 -0.98" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+			                            </shape>
+
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela3DB" translation="-0.63 0.751 -1.02" scale="2.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+			                            </shape>
+
+			                    </transform>
+
+
+			                     <transform id="janela_MB" translation="-0.40 0.752 -0.98" scale="0.6666667 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela_MB" translation="-0.44 0.751 -1.02" scale="0.7666667 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela4EB" translation="-0.82 0.752 -0.98" scale="1 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="CONTORNOjanela4EB" translation="-0.865 0.751 -1.02" scale="1.1 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="janela5EB" translation="-2.5 0.752 -0.98" scale="1.75 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela5EB" translation="-2.54 0.751 -1.02" scale="1.85 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="painel_verdeD" translation="0 0.752 -0.08" scale="2 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#466B42"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="painel_verde">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOpainel_verdeD" translation="0.01 0.751 -0.09" scale="2.05 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="gray"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="painel_verde">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="linha_branca_tras1" translation="2.001 0.127 -0.005" scale="0.625 0.0125 2" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="linha_branca_tras">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="azul_escuro_traseira1" translation="2.001 0.127 6.35" scale="0.625 0.0125 53" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#191E31"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="linha_branca_tras">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="azul_bb_traseira_deit" rotation="0 1 0 -0.42">
+			                   		<transform translation="2.031 0.127 7.065" scale="0.625 0.0125 55" rotation ="0 0 1 1.57">
+			                			<shape>
+
+			                            	<appearance>
+
+			                                <twosidedmaterial diffuseColor="#3C789C"></twosidedmaterial>
+
+			                            	</appearance>
+
+			                            	<x3dgeometrynode use="linha_branca_tras">
+
+			                            	</x3dgeometrynode>
+
+			                       		</shape>
+
+			                        </transform>
+
+			                    </transform>
+
+			                     <transform id="azul_bb_traseira1" translation="2.001 0.127 9.9376" scale="0.625 0.0125 75.5" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#3C789C"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="linha_branca_tras">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="baixo_meio" translation="0 0.125 -0.866" scale="0.88 0.626 0.001" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="baixo_tras1" translation="1.495 0.125 -0.866" scale="0.195 0.626 0.001" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="baixo_frente1" translation="-1.495 0.125 -0.866" scale="0.195 0.626 0.001" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="baixo_tras_rot1" translation="1.844 0.127 
+			                    -0.836" scale="0.158 0.628 0.001" rotation="0 1 0 -0.2">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="baixo_frente_rot1" translation="-1.844 0.127 
+			                    -0.832" scale="0.158 0.628 0.001" rotation="0 1 0 0.2">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="baixo_roda_tras1" translation="1.09 0.125 -0.866" scale="0.210 0.375 0.001" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="gray"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="baixo_roda_frente1" translation="-1.09 0.125 -0.866" scale="0.210 0.375 0.001" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="gray"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="azul_escuro_frontal1" translation="-2.001 0.127 2.305" scale="0.628 0.0125 23" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#191E31"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="linha_branca_tras">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="linha_branca_frenteD1" translation="-2.001 0.628 -0.3" scale="0.125 0.0125 2" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="linha_branca_tras">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="linha_branca_frenteE1" translation="-2.001 -0.377 -0.3" scale="0.125 0.0125 2" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="linha_branca_tras">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="linha_branca_frenteE1" translation="-2.001 -0.377 -0.3" scale="0.125 0.0125 2" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="linha_branca_tras">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="luz_branca_TD1" translation="1.986 0.680 -0.46" scale="0.0325 0.0325 0.0325" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="luz_branca_TD2" translation="1.986 0.680 -0.56" scale="0.0325 0.0325 0.0325" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="luz_vermelha_TD" translation="1.986 0.680 -0.66" scale="0.0325 0.0325 0.0325" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="red"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="luz_laranja_TD" translation="1.988 0.680 -0.75" scale="0.035 0.015 0.02" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="orange"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="luz_branca_TE1" translation="1.986 -0.423 -0.46" scale="0.0325 0.0325 0.0325" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="luz_branca_TE2" translation="1.986 -0.423 -0.56" scale="0.0325 0.0325 0.0325" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="luz_vermelha_TE" translation="1.986 -0.423 -0.66" scale="0.0325 0.0325 0.0325" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="red"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="luz_laranja_TE" translation="1.988 -0.423 -0.75" scale="0.035 0.015 0.02" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="orange"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="luz_medios_FE" translation="-1.98 -0.35 -0.66" scale="0.05 0.05 0.05" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="luz_laranja_FE" translation="-1.995 -0.42 -0.60" scale="0.02 0.02 0.02" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="orange"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="luz_minimos_FE" translation="-1.99 -0.32 -0.76" scale="0.03 0.03 0.03" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="luz_medios_FD" translation="-1.98 0.60 -0.66" scale="0.05 0.05 0.05" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="luz_laranja_FD" translation="-1.995 0.67 -0.60" scale="0.02 0.02 0.02" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="orange"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="luz_minimos_FD" translation="-1.99 0.57 -0.76" scale="0.03 0.03 0.03" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rodas">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela_frenteE" translation="-2.002 0.445 -0.21" scale="1.85 0.00125 1.5" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="gray"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_frente_topo">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="CONTORNOjanela_frenteE" translation="-2.001 0.445 -0.21" scale="1.95 0.00125 1.55" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_frente_topo">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="janela_frenteD" translation="-2.002 -0.20 -0.21" scale="1.85 0.00125 1.5" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="gray"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_frente_topo2">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela_frenteD" translation="-2.001 -0.20 -0.21" scale="1.95 0.00125 1.55" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_frente_topo2">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela_CIMA_frenteE" rotation="0 1 0 0.1">
+
+			                    	<transform translation="-1.993 0.445 0.54" scale="1.85 0.00125 1.5" rotation="0 0 1 1.57">
+			                			<shape>
+
+			                            	<appearance>
+
+			                                	<twosidedmaterial diffuseColor="gray"></twosidedmaterial>
+
+			                            	</appearance>
+
+			                            	<x3dgeometrynode use="janela_frente_topo">
+
+			                            	</x3dgeometrynode>
+
+			                        	</shape>
+			                    	</transform>
+			                    </transform>
+
+			                     <transform id="CONTORNOjanela_CIMA_frenteE" rotation="0 1 0 0.1">
+			                     	<transform translation="-1.992 0.445 0.54" scale="1.95 0.00125 1.55" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                               		 <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                           		 </appearance>
+
+			                           		 <x3dgeometrynode use="janela_frente_topo">
+
+			                           		 </x3dgeometrynode>
+
+			                       		 </shape>
+			                    	</transform>
+
+			                    </transform>
+
+			                     <transform id="janela__CIMA_frenteD" rotation= "0 1 0 0.1"> 
+
+			                     <transform translation="-1.993 -0.20 0.54" scale="1.85 0.00125 1.5" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="gray"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_frente_topo2">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela_CIMA_frenteD"  rotation="0 1 0 0.1">
+
+			                    	<transform translation="-1.992 -0.20 0.54" scale="1.95 0.00125 1.55" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            	<appearance>
+
+			                                	<twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            	</appearance>
+
+			                            	<x3dgeometrynode use="janela_frente_topo2">
+
+			                            	</x3dgeometrynode>
+
+			                        	</shape>
+			                    	</transform>
+			                    </transform>
+
+			                    <transform id="janela_media" rotation= "0 1 0 0.1"> 
+
+			                     <transform translation="-1.999 0.12 0.05" scale="3.6 0.00125 0.8" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_frente_media">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+			                    </transform>
+
+			                    <transform id="nove" rotation= "0 1 0 0.1"> 
+
+			                    	<transform translation="-2.000 0.12 -0.03" scale="0.37 0.00125 0.37" rotation="0 0 1 1.57">
+			                			<shape>
+
+			                            	<appearance>
+
+			                                	<twosidedmaterial diffuseColor="green"></twosidedmaterial>
+
+			                            	</appearance>
+
+			                            	<x3dgeometrynode use="9">
+
+			                            	</x3dgeometrynode>
+
+			                        	</shape>
+			                    	</transform>
+			                    </transform>
+
+			                    <transform id="um" rotation= "0 1 0 0.1"> 
+
+			                    	<transform translation="-2.000 -0.09 -0.31" scale="0.37 0.00125 0.47" rotation="0 0 1 1.57">
+			                			<shape>
+
+			                            	<appearance>
+
+			                                	<twosidedmaterial diffuseColor="green"></twosidedmaterial>
+
+			                            	</appearance>
+
+			                            	<x3dgeometrynode use="1">
+
+			                            	</x3dgeometrynode>
+
+			                        	</shape>
+			                    	</transform>
+			                    </transform>
+
+			                     <transform id="portaE" translation="-1.75 -0.503 -0.40" scale="0.2 0.0125 0.35" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="gray"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOportaE" translation="-1.75 -0.502 -0.40" scale="0.21 0.0125 0.36" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="barraPorta" translation="-1.75 -0.504 -0.40" scale="0.03 0.0125 0.35" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="nroAutocarroE" translation="-1.22 -0.490 0.05" scale="0.085 0.0125 0.07" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="NoveEsquerda" translation="-1.41 -0.5 0.01" scale="0.2 0.0125 0.2" rotation="0 0 1 3.14">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="green"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="9">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="ZeroEsquerda" translation="-1.35 -0.5 0.01" scale="0.2 0.0125 0.2" rotation="0 0 1 3.14">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="green"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="0">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="ZeroZero" translation="-1.192 -0.491 0.048" scale="0.01 0.0125 0.02" rotation="0 0 1 3.14">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="ZeroNove" translation="-1.252 -0.491 0.072" scale="0.008 0.0125 0.008" rotation="0 0 1 3.14">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="janela_tras_deitada1" rotation="0 1 0 -0.42">
+
+			                    	<transform translation="2.03 0.12 -0.15" scale="1 0.0125 1" rotation="0 0 1 -1.57">
+			                			<shape>
+
+			                            	<appearance>
+
+			                                	<twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            	</appearance>
+
+			                            	<x3dgeometrynode use="janela_tras_deitada">
+
+			                            	</x3dgeometrynode>
+
+			                        	</shape>
+			                    	</transform>
+
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela_tras_deitada1" rotation="0 1 0 -0.42">
+
+			                    	<transform translation="2.029 0.12 -0.152" scale="1.01 0.0125 1.02" rotation="0 0 1 -1.57">
+			                			<shape>
+
+			                            	<appearance>
+
+			                                	<twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            	</appearance>
+
+			                            	<x3dgeometrynode use="janela_tras_deitada">
+
+			                            	</x3dgeometrynode>
+
+			                        	</shape>
+			                    	</transform>
+
+			                    </transform>
+
+
+			                    
+			                    	<transform id="janela_tras_meio" translation="2.003 0.100 -0.26" scale="2.3 0.0125 0.6" rotation="0 0 1 1.57">
+			                			<shape>
+
+			                            	<appearance>
+
+			                                	<twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            	</appearance>
+
+			                            	<x3dgeometrynode use="janela_frente_media">
+
+			                            	</x3dgeometrynode>
+
+			                        	</shape>
+			                    	</transform>
+
+			                    	<transform id="CONTORNOjanela_tras_meio" translation="2.002 0.100 -0.26" scale="2.35 0.0125 0.62" rotation="0 0 1 1.57">
+			                			<shape>
+
+			                            	<appearance>
+
+			                                	<twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            	</appearance>
+
+			                            	<x3dgeometrynode use="janela_frente_media">
+
+			                            	</x3dgeometrynode>
+
+			                        	</shape>
+			                    	</transform>
+
+			                    	<transform id = "painel_91" translation="2.003 0.100 0.05" scale="0.8 0.0125 0.7" rotation="0 0 1 1.57">
+			                			<shape>
+
+			                            	<appearance>
+
+			                                	<twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            	</appearance>
+
+			                            	<x3dgeometrynode use="janela_frente_media">
+
+			                            	</x3dgeometrynode>
+
+			                        	</shape>
+			                    	</transform>
+
+			                    	
+			                    		<transform id = "noveTras" translation="1.999 -0.20 -0.02" scale="0.32 0.0125 0.32" rotation="0 0 1 4.7">
+			                				<shape>
+
+			                            		<appearance>
+
+			                                		<twosidedmaterial diffuseColor="green"></twosidedmaterial>
+
+			                            		</appearance>
+
+			                            		<x3dgeometrynode use="9">
+
+			                            		</x3dgeometrynode>
+
+			                        		</shape>
+			                    		</transform>
+			                    	
+
+			                    	<transform id = "painel_0" translation="2.004 0.400 -0.02" scale="0.32 0.0125 0.32" rotation="0 0 1 1.57">
+			                			<shape>
+
+			                            	<appearance>
+
+			                                	<twosidedmaterial diffuseColor="green"></twosidedmaterial>
+
+			                            	</appearance>
+
+			                            	<x3dgeometrynode use="0">
+
+			                            	</x3dgeometrynode>
+
+			                        	</shape>
+			                    	</transform>
+
+			                    	<transform id="ZeroNovetras" translation="1.994 0.05 0.0785" scale="0.016 0.0125 0.016" rotation="0 0 1 1.57">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="ZeroZero" translation="1.994 0.145 0.050" scale="0.01 0.020 0.04" rotation="0 0 1 3.14">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                     <transform id="quadradoazullbb" translation="-1.72 -0.491 0.345" scale="0.135 0.0125 0.07" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#144162"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOquadradoazullbb" translation="-1.72 -0.490 0.335" scale="0.145 0.0125 0.09" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="white"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="rect">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+								<transform id="janela_5B" translation="1.045 0.752 -0.98" scale="0.6666667 0.0125 2" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="#595961"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+			                    </transform>
+
+			                    <transform id="CONTORNOjanela_5B" translation="1 0.751 -1.02" scale="0.7666667 0.0125 2.1" rotation="0 0 0 -0.33">
+			                		<shape>
+
+			                            <appearance>
+
+			                                <twosidedmaterial diffuseColor="black"></twosidedmaterial>
+
+			                            </appearance>
+
+			                            <x3dgeometrynode use="janela_quadrado">
+
+			                            </x3dgeometrynode>
+
+			                        </shape>
+
+			                    </transform>
+
+			                </transform>
+
+                     	</scene>
+                  	</x3d>
+                </td>
+			</tr>
+    	</table>
+
+    	<h2>Dublin Bus</h2>
+        <h3>Dublin Bus operates an extensive network of 110 radial, cross-city and peripheral routes and 18 night routes in the city of Dublin and the Greater Dublin Area. The company carries around 325,000 people each day. The main radial routes are focused upon Dublin's sixteen Quality Bus Corridors which provide buses with daytime access to the city centre.</h3>
+        <h4>Computação Gráfica - 2016/2017 Eng. Informática</h4>
+
+    </body>
+</html>

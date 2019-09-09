@@ -1,0 +1,16 @@
+Informações relativas à configuração do trabalho:
+
+1º Antes de compilar, seja pelo IDE NetBeans, seja pelo Makefile, seja pelo Terminal,
+deve antes alterar o ficheiro svlocal.properties, com as devidas credenciais de port,bdname,user e password.
+
+2º este ficheiro encontra-se na diretoria src/so2/.
+
+3º Caso tenho compilado antes de ler este ficheiro, deve correr o comando "make clean" abrindo o terminal na pasta do projeto e seguir de novo o 1º passo deste ficheiro.
+
+4º Caso queira repor ou criar uma base de dados nova, deve correr a primeira opção do cliente, após
+os três passos anteriores.
+
+
+José Serra 33289
+Carlos Valente 33298
+
